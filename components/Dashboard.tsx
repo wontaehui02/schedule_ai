@@ -130,7 +130,7 @@ export default function Dashboard() {
       const title = row["교과목명"] || "";
       const cleanTitle = title.replace(/[^\w\s가-힣]/g, " ").replace(/[0-9]/g, " ");
       const words = cleanTitle.split(/\s+/);
-      words.forEach(word => {
+      words.forEach((word: string) => {
         const w = word.trim();
         const stopWords = ["및", "의", "이해", "기초", "실습", "연습", "특강", "세미나", "I", "II", "위한", "입문", "개론", "과", "학", "론", "연구", "응용"];
         if (w.length >= 2 && !stopWords.includes(w)) {
